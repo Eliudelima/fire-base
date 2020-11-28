@@ -10,7 +10,7 @@
 			<input type="password" name="password" [(ngModel)]="password" />
 			<hr />
 			<button (click)="loginWithEmail()">Entrar com Email</button>
-			<button (click)="loginWithGoogle()">Entrar com Email</button>
+			<button (click)="loginWithGoogle()">Entrar com Google</button>
 		</fieldset>
 	</form>
 </div>
@@ -21,3 +21,6 @@
 	Logado como <b>{{(authService.user | async)?.email}}</b>
 	<button (click)="logout()">Sair</button>
 </div>
+<div>
+  TODO
+</div> 
