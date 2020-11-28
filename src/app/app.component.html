@@ -1,6 +1,6 @@
 <h1>{{ name }}</h1>
 
-<div>
+<div *ngIf="!(authService.user | async)">
 	<form>
 		<fieldset>
 			<legend>Login</legend>
@@ -15,9 +15,9 @@
 	</form>
 </div>
 <div *ngIf="authService.authError" style="color: red">
-  {{authService.authError}}
+	{{authService.authError}}
 </div>
 <div *ngIf="authService.user | async">
-  Logado como <b>{{(authService.user | async)?.email}}</b>
-  <button (click)="logout()">Sair</button> 
+	Logado como <b>{{(authService.user | async)?.email}}</b>
+	<button (click)="logout()">Sair</button>
 </div>
