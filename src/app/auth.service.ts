@@ -28,7 +28,7 @@ export class AuthService {
   });
   }
 
-  loginwithGoogle(){
+  loginWithGoogle(){
     let thisService = this;
     thisService.authError = null;
     this.firebaseAuth
